@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jsmediatags/3.9.5/jsmediatags.min.js"></script>
+    <title>Spotify - Web Player: Music for everyone</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="utility.css">
+</head>
+
+<body>
+    <nav class="navbar flex space-between items-center">
+        <div class="logo flex pointer items-center justify-center"><img src="logo.svg" alt="Spotify">Spotify Clone</div>
+        <div class="nav-middle flex justify-center items-center">
+            <a class="home flex pointer items-center"><img src="home.svg" alt="home"></a>
+            <div class="searchbar flex items-center">
+                <img class="search-icon pointer" src="search.svg" alt="search">
+                <input class="search-input text" type="search" name="search" placeholder="What do you want to play?">
+                <div class="browse-box flex jusitfy-center items-center pointer"><img src="browse.svg" alt="browse">
+                </div>
+            </div>
+        </div>
+        <div class="mobile-menu-btn">☰</div>
+        <div class="nav-extreme-right flex items-center">
+            <button>Premium</button>
+            <button>Support</button>
+            <button>Download</button>
+            <div class="separator"></div>
+            <a class="flex justify-center items-center pointer" style="gap: 5px; padding-left: 10px;">
+                <img src="download.svg" alt="download"><span style="color: #b3b3b3;     white-space: nowrap;">Install
+                    App</span>
+            </a>
+            <div class="flex justify-center items-center pointer" style="padding: 18px; ">
+                <button class="signup-btn pointer" data-testid="signup-button">Sign up</button>
+                <button class="login-btn pointer" data-testid="login-button">Log in</button>
+            </div>
+        </div>
+
+    </nav>
+    <div class="container grid">
+        <div class="left margin border-radius">
+            <div class="lib-heading flex space-between">
+                <h3>Your Library</h3>
+                <div class="create-btn pointer">
+                    <img src="plus.svg" alt="create">
+                </div>
+                <!-- <input type="file" id="folderInput" webkitdirectory directory multiple> -->
+            </div>
+            <!-- <div class="box-1 box">
+                <h3>Create your first playlist</h3>
+                <h4>It's easy, we'll help you</h4>
+                <button class="pointer">Create playlist</button>
+            </div>
+            <div class="box-2 box">
+                <h3>Let's find some podcasts to follow</h3>
+                <h4>We'll keep you updated on new episodes</h4>
+                <button class="pointer">Browse podcasts</button>
+            </div> -->
+
+
+            <div class="library-container songs">
+
+                <div class="filter-tabs">
+                    <button class="filter-tab active">Recently Added</button>
+                    <button class="filter-tab">Recently Played</button>
+                    <button class="filter-tab">Artist</button>
+                    <button class="filter-tab">Album</button>
+                </div>
+
+                <div class="search-sort">
+                    <svg class="search-icon" viewBox="0 0 16 16" fill="currentColor">
+                        <path
+                            d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+                    </svg>
+                    <svg class="list-icon" viewBox="0 0 16 16" fill="currentColor">
+                        <path
+                            d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z" />
+                    </svg>
+                </div>
+
+                <div class="song-list">
+                    <div class="song-item playable">
+                        <div class="song-thumbnail" style="background: linear-gradient(135deg, #ff6b6b, #ffd93d);">
+                        </div>
+                        <div class="song-info">
+                            <div class="song-title">Midnight Vibes</div>
+                            <div class="song-metadata">
+                                <span class="song-type">Playlist</span>
+                                • 47 songs
+                            </div>
+                        </div>
+                        <svg class="pin-icon" viewBox="0 0 16 16" fill="currentColor">
+                            <path
+                                d="M9.828.722a.5.5 0 0 1 .354.146l4.95 4.95a.5.5 0 0 1 0 .707c-.48.48-1.072.588-1.503.588-.177 0-.335-.018-.46-.039l-3.134 3.134a5.927 5.927 0 0 1 .16 1.013c.046.702-.032 1.687-.72 2.375a.5.5 0 0 1-.707 0l-2.829-2.828-3.182 3.182c-.195.195-.451.293-.707.293-.256 0-.512-.098-.707-.293a.999.999 0 0 1 0-1.414l3.182-3.182-2.828-2.829a.5.5 0 0 1 0-.707c.688-.688 1.673-.766 2.375-.72a5.922 5.922 0 0 1 1.013.16l3.134-3.133c-.021-.126-.039-.284-.039-.461 0-.431.108-1.023.589-1.503a.5.5 0 0 1 .353-.146z" />
+                        </svg>
+
+                    </div>
+                </div>
+            </div>
+            <div class="footer">
+                <div><a href="https://www.spotify.com/in-en/legal/"><span>Legal</span></a></div>
+                <div><a href="https://www.spotify.com/in-en/safetyandprivacy/"><span>Safety &amp; Privacy
+                            Center</span></a></div>
+                <div><a href="https://www.spotify.com/in-en/legal/privacy-policy/"><span>Privacy Policy</span></a></div>
+                <div><a href="https://www.spotify.com/in-en/legal/cookies-policy/"><span>Cookies</span></a></div>
+                <div><a href="https://www.spotify.com/in-en/legal/privacy-policy/#s3"> <span>About Ads</span></a></div>
+                <div><a href="https://www.spotify.com/in-en/accessibility/"><span>Accessibility</span></a></div>
+            </div class="footer">
+        </div>
+        <div class="middle margin border-radius">
+            <div class="header flex space-between items-center">
+                <h2>Trending songs</h2>
+                <button class="bg-transparent pointer">Show all</button>
+            </div>
+            <div class="trending-container">
+
+
+                <button class="scroll-btn" id="scrollLeft" aria-label="Scroll Left">&#8592;</button>
+                <div class="card-row songs pointer flex row items-center jusitfy-center">
+                    <div class="card flex col">
+                        <div class="img-wrapper">
+                            <img src="img1.jpeg" alt="cover">
+                            <div class="play-btn">
+                                <svg data-encore-id="icon" role="img" aria-hidden="true" viewBox="0 0 24 24" width="24"
+                                    height="24" xmlns="http://www.w3.org/2000/svg">
+                                    <!-- Green circle background -->
+                                    <circle cx="12" cy="12" r="12" fill="#3be477" />
+                                    <!-- Smaller black triangle -->
+                                    <path
+                                        d="m7.05 3.606 13.49 7.788a.7.7 0 0 1 0 1.212L7.05 20.394A.7.7 0 0 1 6 19.788V4.212a.7.7 0 0 1 1.05-.606"
+                                        fill="black" transform="scale(0.55) translate(11,11)" />
+                                </svg>
+                            </div>
+                        </div>
+                        <h4>Aavan Jaavan (From "WAR 2")</h4>
+                        <p>Pritam, Arijit Singh, Nikhita Gandhi, Amitabh......</p>
+                    </div>
+                    <div class="card flex col">
+                        <div class="img-wrapper">
+                            <img src="img1.jpeg" alt="cover">
+                            <div class="play-btn">
+                                <svg data-encore-id="icon" role="img" aria-hidden="true" viewBox="0 0 24 24" width="24"
+                                    height="24" xmlns="http://www.w3.org/2000/svg">
+                                    <!-- Green circle background -->
+                                    <circle cx="12" cy="12" r="12" fill="#3be477" />
+                                    <!-- Smaller black triangle -->
+                                    <path
+                                        d="m7.05 3.606 13.49 7.788a.7.7 0 0 1 0 1.212L7.05 20.394A.7.7 0 0 1 6 19.788V4.212a.7.7 0 0 1 1.05-.606"
+                                        fill="black" transform="scale(0.55) translate(11,11)" />
+                                </svg>
+                            </div>
+                        </div>
+                        <h4>Aavan Jaavan (From "WAR 2")</h4>
+                        <p>Pritam, Arijit Singh, Nikhita Gandhi, Amitabh......</p>
+                    </div>
+
+                </div>
+                <button class="scroll-btn" id="scrollRight" aria-label="Scroll Right">&#8594;</button>
+            </div>
+            <div class="header flex space-between items-center">
+                <h2>Popular artists</h2>
+                <button class="bg-transparent pointer">Show all</button>
+            </div>
+        </div>
+        <div class="right margin">
+            <!-- here -->
+            <div class="sidebar border-radius margin">
+                <div class="sidebar-header">
+                    <div class="sidebar-title">Now Playing</div>
+                </div>
+
+                <div class="now-playing-card">
+                    <div class="album-cover-right" id="albumCover">🎵</div>
+
+                    <div class="song-info">
+                        <div class="song-title-right" id="songTitle">Blinding Lights</div>
+                        <div class="artist-name" id="artistName">The Weeknd</div>
+                        <!-- <div class="album-name" id="albumName">After Hours</div> -->
+                    </div>
+                </div>
+
+                <div class="queue-section">
+                    <div class="queue-header">Next in queue</div>
+                    <div class="queue-container">
+                        <div class="queue-item playing">
+                            <div class="queue-cover">🎵</div>
+                            <div class="queue-info">
+                                <div class="queue-title">Blinding Lights</div>
+                                <div class="queue-artist">The Weeknd</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="playbar">
+            <!-- Left Section - Now Playing -->
+            <div class="now-playing">
+                <div class="album-cover"></div>
+                <div class="track-info">
+                    <div class="track-name">Blinding Lights</div>
+                    <div class="artist-name">The Weeknd</div>
+                </div>
+                <button class="like-button">♡</button>
+            </div>
+
+            <!-- Center Section - Player Controls -->
+            <div class="player-controls">
+                <div class="control-buttons">
+                    <button class="control-btn" id="shuffle">🔀</button>
+                    <button class="control-btn change-song" id="previous">⏮</button>
+                    <button class="play-btn-player">⏸</button>
+                    <button class="control-btn change-song" id="next">⏭</button>
+                    <button class="control-btn" id="loop">🔁</button>
+                </div>
+                <div class="progress-bar-container">
+                    <span class="curr-time time">0:00</span>
+                    <div class="progress-bar">
+                        <div class="progress-fill"></div>
+                    </div>
+                    <span class="total-time time">0:00</span>
+                </div>
+            </div>
+
+            <!-- Right Section - Additional Controls -->
+            <div class="right-controls">
+                <button class="control-btn">🎤</button>
+                <button class="control-btn">📋</button>
+                <button class="control-btn">🖥</button>
+                <button class="control-btn" id="mute-btn">🔊</button>
+                <div class="volume-bar" id="volumeBar">
+                    <div class="volume-fill" id="volumeFill"></div>
+                </div>
+                <button class="control-btn" id="fullscreenBtn">⛶</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Queue item interactions
+        document.querySelectorAll('.queue-item').forEach(item => {
+            item.addEventListener('click', () => {
+                // Remove active state from all items
+                document.querySelectorAll('.queue-item').forEach(i => i.classList.remove('playing'));
+                // Add active state to clicked item
+                item.classList.add('playing');
+
+                // Update now playing info
+                const title = item.querySelector('.queue-title').textContent;
+                const artist = item.querySelector('.queue-artist').textContent;
+                const cover = item.querySelector('.queue-cover').textContent;
+                document.getElementById('songTitle').textContent = title;
+                document.getElementById('artistName').textContent = artist;
+                document.getElementById('albumCover').textContent = cover;
+            });
+        });
+    </script>
+
+    <audio id="globalAudio" hidden></audio>
+    <script src="script.js"></script>
+</body>
+
+</html>

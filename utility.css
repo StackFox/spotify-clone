@@ -1,0 +1,56 @@
+.border {
+    border: 2px solid rgb(255, 255, 255);
+}
+
+.invert {
+    filter: invert(1);
+}
+
+.margin {
+    margin: 4px 4px;
+}
+
+.border-radius {
+    border-radius: 8px;
+}
+
+.flex {
+    display: flex;
+}
+
+.grid{
+    display: grid;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+.space-between {
+    justify-content: space-between;
+}
+
+.items-center {
+    align-items: center;
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+.text {
+    cursor: text;
+}
+
+.row {
+    flex-direction: row;
+}
+
+.col {
+    flex-direction: column;
+}
+
+.bg-transparent {
+    background: transparent;
+}
+
