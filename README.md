@@ -41,8 +41,4 @@ Check out the live demo: [https://stackfox.github.io/spotify-clone/](https://sta
 
 Contributions and suggestions are welcome! Please open an issue or submit a pull request.
 
-## License
-
-MIT License
-
 ***
